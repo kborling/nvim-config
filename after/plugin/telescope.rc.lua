@@ -43,24 +43,33 @@ telescope.setup {
 
 telescope.load_extension("file_browser")
 
-vim.keymap.set('n', ';f',
+vim.keymap.set('n', ';f', function()
+  builtin.git_files()
+end)
+vim.keymap.set('n', ';F',
   function()
     builtin.find_files({
       no_ignore = false,
       hidden = true
     })
   end)
-vim.keymap.set('n', ';F', function()
+vim.keymap.set('n', ';o', function()
   builtin.oldfiles()
 end)
 vim.keymap.set('n', ';r', function()
   builtin.live_grep()
+end)
+vim.keymap.set('n', '<C-s>', function()
+  builtin.grep_string()
 end)
 vim.keymap.set('n', '\\\\', function()
   builtin.buffers()
 end)
 vim.keymap.set('n', ';h', function()
   builtin.help_tags()
+end)
+vim.keymap.set('n', ';/', function()
+  builtin.commands()
 end)
 vim.keymap.set('n', ';t', function()
   builtin.treesitter()
@@ -82,14 +91,14 @@ end)
 vim.keymap.set('n', ';C', function()
   builtin.git_commits()
 end)
-vim.keymap.set('n', ';s', function()
-  builtin.git_status()
-end)
+--vim.keymap.set('n', ';s', function()
+  --builtin.git_status()
+--end)
 vim.keymap.set('n', ';z', function()
   builtin.git_stash()
 end)
 
-vim.keymap.set("n", "sf", function()
+vim.keymap.set("n", ";=", function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",
     cwd = telescope_buffer_dir(),
