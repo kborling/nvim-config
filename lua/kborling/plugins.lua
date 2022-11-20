@@ -10,11 +10,14 @@ packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use {
     'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
+    requires = 'tjdevries/colorbuddy.nvim'
   }
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'nvim-lua/plenary.nvim' -- Common utilities
-  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+  use {
+    'sindrets/diffview.nvim', -- File diffs
+    requires = 'nvim-lua/plenary.nvim'
+  }
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
@@ -42,13 +45,16 @@ packer.startup(function(use)
     run = function() vim.fn["mkdp#util#install"]() end,
   })
   use 'akinsho/nvim-bufferline.lua'
+  use 'numToStr/Comment.nvim'
   use {
-    'numToStr/Comment.nvim',
-    config = function()
-      require('Comment').setup()
-    end
+    "danymat/neogen",
+    requires = "nvim-treesitter/nvim-treesitter",
   }
   -- use 'github/copilot.vim'
+  use {
+    'phaazon/hop.nvim', -- Jump to anywhere
+    branch = 'v2', -- optional but strongly recommended
+  }
 
   use 'timuntersberger/neogit' -- Magit clone
   use 'lewis6991/gitsigns.nvim'
