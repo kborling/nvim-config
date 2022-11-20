@@ -12,6 +12,9 @@ keymap.set('n', 'dw', 'vb"_d')
 -- Select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
+-- Replace all
+keymap.set('n', 'S', ':%s///cg<Left><Left><Left><Left>')
+
 -- Save with root permission (not working for now)
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 
