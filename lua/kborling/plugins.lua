@@ -41,14 +41,20 @@ packer.startup(function(use)
     run = function() vim.fn["mkdp#util#install"]() end,
   })
   use 'akinsho/nvim-bufferline.lua'
-  -- use 'github/copilot.vim'
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
+  use 'github/copilot.vim'
 
   use 'timuntersberger/neogit' -- Magit clone
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browse
 
-  use {'nvim-orgmode/orgmode', config = function()
-    require('orgmode').setup{}
+  use { 'nvim-orgmode/orgmode', config = function()
+    require('orgmode').setup {}
   end
   }
   -- Load custom treesitter grammar for org filetype
@@ -62,13 +68,13 @@ packer.startup(function(use)
       enable = true,
       -- Required for spellcheck, some LaTex highlights and
       -- code block highlights that do not have ts grammar
-      additional_vim_regex_highlighting = {'org'},
+      additional_vim_regex_highlighting = { 'org' },
     },
-    ensure_installed = {'org'}, -- Or run :TSUpdate org
+    ensure_installed = { 'org' }, -- Or run :TSUpdate org
   }
 
   require('orgmode').setup({
-    org_agenda_files = {'~/Dropbox/org/*', '~/my-orgs/**/*'},
+    org_agenda_files = { '~/Dropbox/org/*', '~/my-orgs/**/*' },
     org_default_notes_file = '~/Dropbox/org/refile.org',
   })
 end)
