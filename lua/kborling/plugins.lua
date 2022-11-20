@@ -14,6 +14,7 @@ packer.startup(function(use)
   }
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'nvim-lua/plenary.nvim' -- Common utilities
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
@@ -47,7 +48,7 @@ packer.startup(function(use)
       require('Comment').setup()
     end
   }
-  use 'github/copilot.vim'
+  -- use 'github/copilot.vim'
 
   use 'timuntersberger/neogit' -- Magit clone
   use 'lewis6991/gitsigns.nvim'
@@ -74,7 +75,7 @@ packer.startup(function(use)
   }
 
   require('orgmode').setup({
-    org_agenda_files = { '~/Dropbox/org/*', '~/my-orgs/**/*' },
-    org_default_notes_file = '~/Dropbox/org/refile.org',
+    org_agenda_files = { '~/org/**/*' },
+    org_default_notes_file = '~/org/refile.org',
   })
 end)
