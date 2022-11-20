@@ -16,6 +16,9 @@ telescope.setup {
       n = {
         ["q"] = actions.close
       },
+      i = {
+        ["<C-h>"] = "which_key"
+      },
     },
   },
   extensions = {
@@ -43,14 +46,14 @@ telescope.setup {
 
 telescope.load_extension("file_browser")
 
-vim.keymap.set('n', ';f', function()
+vim.keymap.set('n', ';F', function()
   builtin.git_files()
 end)
-vim.keymap.set('n', ';F',
+vim.keymap.set('n', ';f',
   function()
     builtin.find_files({
       no_ignore = false,
-      hidden = true
+      hidden = false
     })
   end)
 vim.keymap.set('n', ';o', function()
@@ -91,9 +94,9 @@ end)
 vim.keymap.set('n', ';C', function()
   builtin.git_commits()
 end)
---vim.keymap.set('n', ';s', function()
-  --builtin.git_status()
---end)
+vim.keymap.set('n', ';s', function()
+  builtin.git_status()
+end)
 vim.keymap.set('n', ';z', function()
   builtin.git_stash()
 end)
