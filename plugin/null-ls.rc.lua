@@ -20,7 +20,10 @@ null_ls.setup {
     null_ls.builtins.diagnostics.eslint_d.with({
       diagnostics_format = '[eslint] #{m}\n(#{c})'
     }),
-    null_ls.builtins.diagnostics.fish
+    -- Eslint format on save
+    null_ls.builtins.formatting.eslint_d.with({
+      formatting_format = '[eslint] --fix-to-stdout --stdin --stdin-filename %f:%l:%c: %m'
+    }),
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
