@@ -8,10 +8,6 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
-  -- use {
-  --   'svrana/neosolarized.nvim',
-  --   requires = 'tjdevries/colorbuddy.nvim'
-  -- }
   use {
     "jesseleite/nvim-noirbuddy",
     requires = { "tjdevries/colorbuddy.nvim", branch = "dev" }
@@ -37,6 +33,7 @@ packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
+  use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
