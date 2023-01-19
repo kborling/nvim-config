@@ -104,6 +104,29 @@ nvim_lsp.jsonls.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.astro.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+nvim_lsp.gopls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+nvim_lsp.rls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "rustup", "run", "nightly", "rls" },
+  settings = {
+    rust = {
+      unstable_features = true,
+      build_on_save = false,
+      all_features = true,
+    },
+  },
+}
+
 nvim_lsp.sumneko_lua.setup {
   capabilities = capabilities,
   on_attach = function(client, bufnr)
