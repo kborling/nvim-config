@@ -94,6 +94,11 @@ nvim_lsp.html.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.svelte.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
 nvim_lsp.omnisharp.setup {
   on_attach = on_attach,
   capabilities = capabilities
@@ -117,7 +122,7 @@ nvim_lsp.gopls.setup {
 nvim_lsp.rls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  cmd = { "rustup", "run", "nightly", "rls" },
+  cmd = { "rustup", "run", "stable", "rust-analyzer" },
   settings = {
     rust = {
       unstable_features = true,
