@@ -17,6 +17,9 @@ keymap.set('n', 'S', ':%s///cg<Left><Left><Left><Left>')
 
 -- Save with root permission (not working for now)
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
+-- Kill buffer without removing window split
+-- Shows previous buffer as the new buffer
+keymap.set('n', '<leader>d', ':bp|bd#<CR>')
 
 -- New tab
 keymap.set('n', 'te', ':tabedit')
