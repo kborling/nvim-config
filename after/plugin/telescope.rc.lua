@@ -62,16 +62,16 @@ end)
 vim.keymap.set('n', ';r', function()
   builtin.live_grep()
 end)
-vim.keymap.set('n', '<C-s>', function()
+vim.keymap.set('n', ';s', function()
   builtin.grep_string()
 end)
-vim.keymap.set('n', '\\\\', function()
+vim.keymap.set('n', ';b', function()
   builtin.buffers()
 end)
 vim.keymap.set('n', ';h', function()
   builtin.help_tags()
 end)
-vim.keymap.set('n', ';/', function()
+vim.keymap.set('n', ';=', function()
   builtin.commands()
 end)
 vim.keymap.set('n', ';t', function()
@@ -85,23 +85,23 @@ vim.keymap.set('n', ';e', function()
 end)
 
 -- Git
-vim.keymap.set('n', ';b', function()
+vim.keymap.set('n', ';gb', function()
   builtin.git_branches()
 end)
-vim.keymap.set('n', ';c', function()
+vim.keymap.set('n', ';gc', function()
   builtin.git_bcommits()
 end)
-vim.keymap.set('n', ';C', function()
+vim.keymap.set('n', ';gC', function()
   builtin.git_commits()
 end)
-vim.keymap.set('n', ';s', function()
+vim.keymap.set('n', ';gs', function()
   builtin.git_status()
 end)
-vim.keymap.set('n', ';z', function()
+vim.keymap.set('n', ';gz', function()
   builtin.git_stash()
 end)
 
-vim.keymap.set("n", ";=", function()
+vim.keymap.set("n", ";/", function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",
     cwd = telescope_buffer_dir(),
@@ -109,7 +109,7 @@ vim.keymap.set("n", ";=", function()
     hidden = true,
     grouped = true,
     previewer = false,
-    initial_mode = "normal",
+    initial_mode = "insert",
     layout_config = { height = 40 }
   })
 end)
