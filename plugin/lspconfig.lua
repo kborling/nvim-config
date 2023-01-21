@@ -99,6 +99,11 @@ nvim_lsp.html.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.emmet_ls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
 nvim_lsp.svelte.setup {
   on_attach = on_attach,
   capabilities = capabilities
