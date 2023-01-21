@@ -124,11 +124,6 @@ _G.packer_plugins = {
     path = "/Users/kevinborling/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
   },
-  ["lspsaga.nvim"] = {
-    loaded = true,
-    path = "/Users/kevinborling/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
-    url = "https://github.com/glepnir/lspsaga.nvim"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/kevinborling/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -245,6 +240,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/kevinborling/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/Users/kevinborling/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   ["zen-mode.nvim"] = {
     loaded = true,
