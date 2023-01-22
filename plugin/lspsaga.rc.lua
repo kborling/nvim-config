@@ -73,15 +73,21 @@ Group.new('TitleString', colors.secondary, colors.gray0)
 Group.new('TitleSymbol', colors.primary, colors.gray0)
 Group.new('TitleIcon', colors.primary, colors.gray0)
 Group.new('SagaBorder', colors.noir_7, colors.gray0)
-Group.new('SagaBeacon', colors.primary, nil)
-Group.new('SagaExpand', colors.diff_delete, nil)
-Group.new('SagaCollapse', colors.diff_delete, nil)
+-- Group.new('SagaBeacon', colors.primary, nil)
+-- Group.new('SagaExpand', colors.diff_delete, nil)
+-- Group.new('SagaCollapse', colors.diff_delete, nil)
 -- finder
 Group.new('FinderType', colors.secondary, nil)
 Group.new('FinderSelection', colors.primary, nil)
 Group.new('FinderIcon', colors.secondary, nil)
+-- hover
+Group.new('HoverNormal', colors.primary, colors.gray0)
+-- rename
+Group.new('RenameNormal', colors.primary, colors.gray0)
 -- code action
-Group.new('CodeActionText', colors.diff_change, nil)
+Group.new('CodeActionText', colors.secondary, nil)
 Group.new('CodeActionConceal', colors.diff_add, nil)
 -- outline
 Group.new('OutlineIndent', colors.noir_7, nil)
+-- terminal
+Group.new('TerminalNormal', colors.secondary, colors.gray0)
