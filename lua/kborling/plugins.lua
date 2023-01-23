@@ -59,7 +59,7 @@ packer.startup(function(use)
     "danymat/neogen",
     requires = "nvim-treesitter/nvim-treesitter",
   }
-  -- use 'github/copilot.vim'
+  use 'github/copilot.vim'
   use {
     'phaazon/hop.nvim', -- Jump to anywhere
     branch = 'v2', -- optional but strongly recommended
