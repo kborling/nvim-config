@@ -56,7 +56,7 @@ vim.keymap.set('n', ';f',
       hidden = false
     })
   end)
-vim.keymap.set('n', ';o', function()
+vim.keymap.set('n', ';\\', function()
   builtin.oldfiles()
 end)
 vim.keymap.set('n', ';r', function()
@@ -80,8 +80,43 @@ end)
 vim.keymap.set('n', ';;', function()
   builtin.resume()
 end)
-vim.keymap.set('n', ';e', function()
+
+-- Lsp
+
+vim.keymap.set('n', 'ge', function()
   builtin.diagnostics()
+end)
+
+vim.keymap.set('n', ';cr', function()
+  builtin.lsp_references()
+end)
+
+vim.keymap.set('n', ';cd', function()
+  builtin.lsp_definitions()
+end)
+
+vim.keymap.set('n', ';cD', function()
+  builtin.lsp_type_definitions()
+end)
+
+vim.keymap.set('n', 'gi', function()
+  builtin.lsp_implementations()
+end)
+
+vim.keymap.set('n', 'gs', function()
+  builtin.lsp_document_symbols()
+end)
+
+vim.keymap.set('n', 'gS', function()
+  builtin.lsp_workspace_symbols()
+end)
+
+vim.keymap.set('n', 'go', function()
+  builtin.lsp_incoming_calls()
+end)
+
+vim.keymap.set('n', 'gO', function()
+  builtin.lsp_outgoing_calls()
 end)
 
 -- Git

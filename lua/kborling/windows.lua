@@ -1,2 +1,2 @@
 vim.opt.clipboard:prepend { 'unnamed', 'unnamedplus' }
-vim.opt.shell = 'powershell'
+-- vim.opt.shell = 'powershell'
