@@ -60,10 +60,10 @@ packer.startup(function(use)
     requires = "nvim-treesitter/nvim-treesitter",
   }
   use 'github/copilot.vim'
-  use {
-    'phaazon/hop.nvim', -- Jump to anywhere
-    branch = 'v2', -- optional but strongly recommended
-  }
+  -- use {
+  --   'phaazon/hop.nvim', -- Jump to anywhere
+  --   branch = 'v2', -- optional but strongly recommended
+  -- }
 
   use 'timuntersberger/neogit' -- Magit clone
   use 'lewis6991/gitsigns.nvim'
