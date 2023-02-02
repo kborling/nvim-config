@@ -6,4 +6,4 @@ neogen.setup({
 })
 
 local opts = { noremap = true, silent = true }
-vim.api.nvim_set_keymap("n", ";cc", ":lua require('neogen').generate()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>cc", ":lua require('neogen').generate()<CR>", opts)

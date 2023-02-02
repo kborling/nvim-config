@@ -12,6 +12,7 @@ packer.startup(function(use)
     "jesseleite/nvim-noirbuddy",
     requires = { "tjdevries/colorbuddy.nvim", branch = "dev" }
   }
+  use({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' })
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'nvim-lua/plenary.nvim' -- Common utilities
   use {
@@ -35,6 +36,14 @@ packer.startup(function(use)
   }
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'kyazdani42/nvim-web-devicons' -- File icons
+  use {
+    'ThePrimeagen/refactoring.nvim',
+    requires = {
+      { 'nvim-lua/plenary.nvim' },
+      { 'nvim-treesitter/nvim-treesitter' }
+    }
+  }
+  use 'ThePrimeagen/harpoon'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'windwp/nvim-autopairs'

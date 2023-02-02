@@ -4,7 +4,7 @@ local keymap = vim.keymap
 keymap.set('n', 'x', '"_x')
 
 -- Execute Lua script in {file}.
-keymap.set('n', '<leader>r', ':luafile %<CR>')
+keymap.set('n', '<leader>l', ':luafile %<CR>')
 
 -- Increment/decrement
 keymap.set('n', '+', '<C-a>')
