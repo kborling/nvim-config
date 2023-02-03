@@ -11,7 +11,6 @@ ts.setup {
     disable = {},
   },
   ensure_installed = {
-    "tsx",
     "typescript",
     "javascript",
     "jsdoc",
@@ -21,8 +20,11 @@ ts.setup {
     "yaml",
     "css",
     "html",
+    "scss",
     "http",
-    "lua"
+    "lua",
+    "rust",
+    "cpp"
   },
   autotag = {
     enable = true,
