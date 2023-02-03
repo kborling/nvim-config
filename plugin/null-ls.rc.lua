@@ -24,6 +24,8 @@ null_ls.setup {
     null_ls.builtins.formatting.eslint_d.with({
       formatting_format = '[eslint] --fix-to-stdout --stdin --stdin-filename %f:%l:%c: %m'
     }),
+    -- Typescript extras
+    require("typescript.extensions.null-ls.code-actions"),
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
