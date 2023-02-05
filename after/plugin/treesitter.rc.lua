@@ -83,6 +83,7 @@ ts.setup {
   },
   highlight = {
     enable = true,
+    additional_vim_regex_highlighting = { 'org' },
     disable = {},
   },
   indent = {
@@ -103,7 +104,8 @@ ts.setup {
     "http",
     "lua",
     "rust",
-    "cpp"
+    "cpp",
+    "org"
   },
   autotag = {
     enable = true,

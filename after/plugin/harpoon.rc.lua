@@ -5,7 +5,7 @@ harpoon.setup({})
 local harpoon_mark = require("harpoon.mark")
 local harpoon_ui = require("harpoon.ui")
 -- local harpoon_term = require("harpoon.term")
-local harpoon_cmd_ui = require("harpoon.cmd-ui")
+-- local harpoon_cmd_ui = require("harpoon.cmd-ui")
 
 vim.keymap.set('n', '<leader>hp', function()
   harpoon_ui.nav_prev()

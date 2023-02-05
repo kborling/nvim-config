@@ -29,6 +29,9 @@ packer.startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
 
   use 'jose-elias-alvarez/typescript.nvim' -- Extra utilities for TypeScript
+  use 'simrat39/rust-tools.nvim' -- Extra utilities for Rust
+
+  -- use 'mfussenegger/nvim-dap' -- Debugging
 
   use 'glepnir/lspsaga.nvim' -- LSP UIs
   use 'L3MON4D3/LuaSnip'
@@ -50,14 +53,7 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
-  use({
-    "kylechui/nvim-surround",
-    tag = "*",
-    config = function()
-      require("nvim-surround").setup({
-      })
-    end
-  })
+  use 'kylechui/nvim-surround'
   use 'norcalli/nvim-colorizer.lua'
   use 'folke/zen-mode.nvim'
   use({
@@ -77,4 +73,5 @@ packer.startup(function(use)
   use 'dinhhuy258/git.nvim' -- For git blame & browse
 
   use 'nvim-orgmode/orgmode' -- Org mode
+
 end)
