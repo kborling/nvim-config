@@ -205,7 +205,6 @@ _G.packer_plugins = {
     url = "https://github.com/jesseleite/nvim-noirbuddy"
   },
   ["nvim-surround"] = {
-    config = { "\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0" },
     loaded = true,
     path = "/Users/kevinborling/.local/share/nvim/site/pack/packer/start/nvim-surround",
     url = "https://github.com/kylechui/nvim-surround"
@@ -265,6 +264,11 @@ _G.packer_plugins = {
     path = "/Users/kevinborling/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["text-case.nvim"] = {
+    loaded = true,
+    path = "/Users/kevinborling/.local/share/nvim/site/pack/packer/start/text-case.nvim",
+    url = "https://github.com/johmsalas/text-case.nvim"
+  },
   ["typescript.nvim"] = {
     loaded = true,
     path = "/Users/kevinborling/.local/share/nvim/site/pack/packer/start/typescript.nvim",
@@ -278,10 +282,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-surround
-time([[Config for nvim-surround]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
-time([[Config for nvim-surround]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

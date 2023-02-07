@@ -1,0 +1,42 @@
+local status, case = pcall(require, "textcase")
+if (not status) then return end
+
+case.setup({})
+
+local opts = { noremap = true, silent = true }
+
+vim.api.nvim_set_keymap("n", "gau", ":lua require('textcase').current_word('to_upper_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gal", ":lua require('textcase').current_word('to_lower_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gas", ":lua require('textcase').current_word('to_snake_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gad", ":lua require('textcase').current_word('to_dash_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gan", ":lua require('textcase').current_word('to_constant_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gad", ":lua require('textcase').current_word('to_dot_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gaa", ":lua require('textcase').current_word('to_phrase_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gac", ":lua require('textcase').current_word('to_camel_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gap", ":lua require('textcase').current_word('to_pascal_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gat", ":lua require('textcase').current_word('to_title_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gaf", ":lua require('textcase').current_word('to_path_case')<CR>", opts)
+
+vim.api.nvim_set_keymap("n", "gaU", ":lua require('textcase').lsp_rename('to_upper_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gaL", ":lua require('textcase').lsp_rename('to_lower_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gaS", ":lua require('textcase').lsp_rename('to_snake_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gaD", ":lua require('textcase').lsp_rename('to_dash_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gaN", ":lua require('textcase').lsp_rename('to_constant_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gaD", ":lua require('textcase').lsp_rename('to_dot_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gaA", ":lua require('textcase').lsp_rename('to_phrase_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gaC", ":lua require('textcase').lsp_rename('to_camel_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gaP", ":lua require('textcase').lsp_rename('to_pascal_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gaT", ":lua require('textcase').lsp_rename('to_title_case')<CR>", opts)
+vim.api.nvim_set_keymap("n", "gaF", ":lua require('textcase').lsp_rename('to_path_case')<CR>", opts)
+
+-- vim.api.nvim_set_keymap("n", "geu", ":lua require('textcase').operator('to_upper_case')<CR>", opts)
+-- vim.api.nvim_set_keymap("n", "gel", ":lua require('textcase').operator('to_lower_case')<CR>", opts)
+-- vim.api.nvim_set_keymap("n", "ges", ":lua require('textcase').operator('to_snake_case')<CR>", opts)
+-- vim.api.nvim_set_keymap("n", "ged", ":lua require('textcase').operator('to_dash_case')<CR>", opts)
+-- vim.api.nvim_set_keymap("n", "gen", ":lua require('textcase').operator('to_constant_case')<CR>", opts)
+-- vim.api.nvim_set_keymap("n", "ged", ":lua require('textcase').operator('to_dot_case')<CR>", opts)
+-- vim.api.nvim_set_keymap("n", "gea", ":lua require('textcase').operator('to_phrase_case')<CR>", opts)
+-- vim.api.nvim_set_keymap("n", "gec", ":lua require('textcase').operator('to_camel_case')<CR>", opts)
+-- vim.api.nvim_set_keymap("n", "gep", ":lua require('textcase').operator('to_pascal_case')<CR>", opts)
+-- vim.api.nvim_set_keymap("n", "get", ":lua require('textcase').operator('to_title_case')<CR>", opts)
+-- vim.api.nvim_set_keymap("n", "gef", ":lua require('textcase').operator('to_path_case')<CR>", opts)

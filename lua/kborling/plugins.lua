@@ -41,6 +41,7 @@ packer.startup(function(use)
   }
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'kyazdani42/nvim-web-devicons' -- File icons
+  use 'johmsalas/text-case.nvim' -- Text case conversion
   use {
     'ThePrimeagen/refactoring.nvim',
     requires = {
