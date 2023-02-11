@@ -14,16 +14,16 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   'wbthomason/packer.nvim',
+  { 'projekt0n/github-nvim-theme', version = 'v0.0.7' },
   {
     "jesseleite/nvim-noirbuddy",
-    requires = { "tjdevries/colorbuddy.nvim", branch = "dev" }
+    dependencies = { "tjdevries/colorbuddy.nvim", branch = "dev" }
   },
-  { 'projekt0n/github-nvim-theme', tag = 'v0.0.7' },
   'nvim-lualine/lualine.nvim', -- Statusline
   'nvim-lua/plenary.nvim', -- Common utilities
   {
     'sindrets/diffview.nvim', -- File diffs
-    requires = 'nvim-lua/plenary.nvim'
+    dependencies = 'nvim-lua/plenary.nvim'
   },
   'onsails/lspkind-nvim', -- vscode-like pictograms
   'hrsh7th/cmp-buffer', -- nvim-cmp source for buffer words
@@ -43,14 +43,14 @@ require("lazy").setup({
   'L3MON4D3/LuaSnip',
   {
     'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    build = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   },
   'nvim-treesitter/nvim-treesitter-textobjects',
   'kyazdani42/nvim-web-devicons', -- File icons
   'johmsalas/text-case.nvim', -- Text case conversion
   {
     'ThePrimeagen/refactoring.nvim',
-    requires = {
+    dependencies = {
       { 'nvim-lua/plenary.nvim' },
       { 'nvim-treesitter/nvim-treesitter' }
     }
@@ -65,13 +65,14 @@ require("lazy").setup({
   'folke/zen-mode.nvim',
   {
     "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
+    build = function() vim.fn["mkdp#util#install"]() end,
   },
+  { "folke/which-key.nvim", lazy = true },
   'akinsho/nvim-bufferline.lua',
   'numToStr/Comment.nvim',
   {
     "danymat/neogen",
-    requires = "nvim-treesitter/nvim-treesitter",
+    dependencies = "nvim-treesitter/nvim-treesitter",
   },
   'github/copilot.vim',
 
