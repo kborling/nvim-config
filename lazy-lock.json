@@ -12,7 +12,6 @@
   "harpoon": { "branch": "master", "commit": "8c0bb0a328e57278f4783bb0e2ea32f296d36db1" },
   "lazy.nvim": { "branch": "main", "commit": "bab744565e9d8d743b1889c66707aa2e8018ae86" },
   "lspkind-nvim": { "branch": "master", "commit": "c68b3a003483cf382428a43035079f78474cd11e" },
-  "lspsaga.nvim": { "branch": "main", "commit": "96a95ddcbabee9b0c84d750b828ea936b0b00252" },
   "lualine.nvim": { "branch": "master", "commit": "0050b308552e45f7128f399886c86afefc3eb988" },
   "markdown-preview.nvim": { "branch": "master", "commit": "02cc3874738bc0f86e4b91f09b8a0ac88aef8e96" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "7a97a77eee486ae152d2c559a459eda7c8aa12aa" },
@@ -39,6 +38,7 @@
   "telescope-file-browser.nvim": { "branch": "master", "commit": "304508fb7bea78e3c0eeddd88c4837501e403ae8" },
   "telescope.nvim": { "branch": "master", "commit": "203bf5609137600d73e8ed82703d6b0e320a5f36" },
   "text-case.nvim": { "branch": "main", "commit": "2cbe6b6653b46d2ec23bb2ba808b5c1fc78e9382" },
+  "trouble.nvim": { "branch": "main", "commit": "556ef3089709a6e253df1e500381fec5eb48e48a" },
   "typescript.nvim": { "branch": "main", "commit": "f66d4472606cb24615dfb7dbc6557e779d177624" },
   "which-key.nvim": { "branch": "main", "commit": "5224c261825263f46f6771f1b644cae33cd06995" },
   "zen-mode.nvim": { "branch": "main", "commit": "3c92f503823088862ca2a7809d1c7edc90fb92fa" }

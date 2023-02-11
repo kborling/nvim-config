@@ -39,14 +39,18 @@ require("lazy").setup({
 
   -- 'mfussenegger/nvim-dap', -- Debugging
 
-  'glepnir/lspsaga.nvim', -- LSP UIs
+  -- 'glepnir/lspsaga.nvim', -- LSP UIs
+  {
+    'folke/trouble.nvim', -- LSP diagnostics
+    dependencies = 'nvim-tree/nvim-web-devicons',
+  },
   'L3MON4D3/LuaSnip',
   {
     'nvim-treesitter/nvim-treesitter',
     build = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   },
   'nvim-treesitter/nvim-treesitter-textobjects',
-  'kyazdani42/nvim-web-devicons', -- File icons
+  'nvim-tree/nvim-web-devicons', -- File icons
   'johmsalas/text-case.nvim', -- Text case conversion
   {
     'ThePrimeagen/refactoring.nvim',
