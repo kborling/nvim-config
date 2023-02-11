@@ -1,78 +1,84 @@
-local status, packer = pcall(require, "packer")
-if (not status) then
-  print("Packer is not installed")
-  return
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
 
-vim.cmd [[packadd packer.nvim]]
+vim.opt.rtp:prepend(lazypath)
 
-packer.startup(function(use)
-  use 'wbthomason/packer.nvim'
-  use {
+require("lazy").setup({
+  'wbthomason/packer.nvim',
+  {
     "jesseleite/nvim-noirbuddy",
     requires = { "tjdevries/colorbuddy.nvim", branch = "dev" }
-  }
-  use({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' })
-  use 'nvim-lualine/lualine.nvim' -- Statusline
-  use 'nvim-lua/plenary.nvim' -- Common utilities
-  use {
+  },
+  { 'projekt0n/github-nvim-theme', tag = 'v0.0.7' },
+  'nvim-lualine/lualine.nvim', -- Statusline
+  'nvim-lua/plenary.nvim', -- Common utilities
+  {
     'sindrets/diffview.nvim', -- File diffs
     requires = 'nvim-lua/plenary.nvim'
-  }
-  use 'onsails/lspkind-nvim' -- vscode-like pictograms
-  use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
-  use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
-  use 'hrsh7th/nvim-cmp' -- Completion
-  use 'neovim/nvim-lspconfig' -- LSP
-  use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
-  use 'williamboman/mason.nvim'
-  use 'williamboman/mason-lspconfig.nvim'
+  },
+  'onsails/lspkind-nvim', -- vscode-like pictograms
+  'hrsh7th/cmp-buffer', -- nvim-cmp source for buffer words
+  'hrsh7th/cmp-nvim-lsp', -- nvim-cmp source for neovim's built-in LSP
+  'hrsh7th/nvim-cmp', -- Completion
+  'neovim/nvim-lspconfig', -- LSP
+  'jose-elias-alvarez/null-ls.nvim', -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+  'williamboman/mason.nvim',
+  'williamboman/mason-lspconfig.nvim',
 
-  use 'jose-elias-alvarez/typescript.nvim' -- Extra utilities for TypeScript
-  use 'simrat39/rust-tools.nvim' -- Extra utilities for Rust
+  'jose-elias-alvarez/typescript.nvim', -- Extra utilities for TypeScript
+  'simrat39/rust-tools.nvim', -- Extra utilities for Rust
 
-  -- use 'mfussenegger/nvim-dap' -- Debugging
+  -- 'mfussenegger/nvim-dap', -- Debugging
 
-  use 'glepnir/lspsaga.nvim' -- LSP UIs
-  use 'L3MON4D3/LuaSnip'
-  use {
+  'glepnir/lspsaga.nvim', -- LSP UIs
+  'L3MON4D3/LuaSnip',
+  {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-  }
-  use 'nvim-treesitter/nvim-treesitter-textobjects'
-  use 'kyazdani42/nvim-web-devicons' -- File icons
-  use 'johmsalas/text-case.nvim' -- Text case conversion
-  use {
+  },
+  'nvim-treesitter/nvim-treesitter-textobjects',
+  'kyazdani42/nvim-web-devicons', -- File icons
+  'johmsalas/text-case.nvim', -- Text case conversion
+  {
     'ThePrimeagen/refactoring.nvim',
     requires = {
       { 'nvim-lua/plenary.nvim' },
       { 'nvim-treesitter/nvim-treesitter' }
     }
-  }
-  use 'ThePrimeagen/harpoon'
-  use 'nvim-telescope/telescope.nvim'
-  use 'nvim-telescope/telescope-file-browser.nvim'
-  use 'windwp/nvim-autopairs'
-  use 'windwp/nvim-ts-autotag'
-  use 'kylechui/nvim-surround'
-  use 'norcalli/nvim-colorizer.lua'
-  use 'folke/zen-mode.nvim'
-  use({
+  },
+  'ThePrimeagen/harpoon',
+  'nvim-telescope/telescope.nvim',
+  'nvim-telescope/telescope-file-browser.nvim',
+  'windwp/nvim-autopairs',
+  'windwp/nvim-ts-autotag',
+  'kylechui/nvim-surround',
+  'norcalli/nvim-colorizer.lua',
+  'folke/zen-mode.nvim',
+  {
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
-  })
-  use 'akinsho/nvim-bufferline.lua'
-  use 'numToStr/Comment.nvim'
-  use {
+  },
+  'akinsho/nvim-bufferline.lua',
+  'numToStr/Comment.nvim',
+  {
     "danymat/neogen",
     requires = "nvim-treesitter/nvim-treesitter",
-  }
-  use 'github/copilot.vim'
+  },
+  'github/copilot.vim',
 
-  use 'timuntersberger/neogit' -- Magit clone
-  use 'lewis6991/gitsigns.nvim'
-  use 'dinhhuy258/git.nvim' -- For git blame & browse
+  'timuntersberger/neogit', -- Magit clone
+  'lewis6991/gitsigns.nvim',
+  'dinhhuy258/git.nvim', -- For git blame & browse
 
-  use 'nvim-orgmode/orgmode' -- Org mode
+  'nvim-orgmode/orgmode', -- Org mode
 
-end)
+})

@@ -19,6 +19,9 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 -- Replace all
 keymap.set('n', 'S', ':%s///cg<Left><Left><Left><Left>')
 
+-- Reduce empty lines into one
+keymap.set('n', '<leader>m', ':g/^$/,/./-1j<CR>:noh<CR>')
+
 -- Kill buffer without removing window split
 -- Shows previous buffer as the new buffer
 keymap.set('n', '<leader>d', ':bp|bd#<CR>')
