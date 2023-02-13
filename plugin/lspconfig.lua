@@ -132,7 +132,7 @@ nvim_lsp.rls.setup {
     },
 }
 
-nvim_lsp.lua_lsp.setup {
+nvim_lsp.lua_ls.setup {
     capabilities = capabilities,
     on_attach = function(client, bufnr)
       on_attach(client, bufnr)
