@@ -34,8 +34,8 @@ vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
 -- Turn off paste mode when leaving insert
 vim.api.nvim_create_autocmd("InsertLeave", {
-  pattern = '*',
-  command = "set nopaste"
+    pattern = '*',
+    command = "set nopaste"
 })
 
 -- Add asterisks in block comments
@@ -44,7 +44,7 @@ vim.opt.formatoptions:append { 'r' }
 -- Neovide
 if vim.g.neovide then
   vim.opt.guifont = "Berkeley Mono:h12"
-  vim.g.neovide_transparency = 0.0
+  vim.g.neovide_transparency = 1.0
   vim.g.neovide_scroll_animation_length = 0.2
   vim.g.neovide_hide_mouse_when_typing = false
   vim.g.neovide_refresh_rate = 144
