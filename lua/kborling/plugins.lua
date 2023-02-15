@@ -36,13 +36,21 @@ lazy.setup({
     'jose-elias-alvarez/null-ls.nvim', -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
+    'akinsho/toggleterm.nvim',
 
     'jose-elias-alvarez/typescript.nvim', -- Extra utilities for TypeScript
     'simrat39/rust-tools.nvim', -- Extra utilities for Rust
 
     -- 'mfussenegger/nvim-dap', -- Debugging
 
-    'glepnir/lspsaga.nvim', -- LSP UIs
+    {
+        'glepnir/lspsaga.nvim', -- LSP UIs
+        event = "BufRead",
+        dependencies = {
+            { 'nvim-tree/nvim-web-devicons' },
+            { 'nvim-treesitter/nvim-treesitter' }
+        }
+    },
     {
         'folke/trouble.nvim', -- LSP diagnostics
         dependencies = 'nvim-tree/nvim-web-devicons',
