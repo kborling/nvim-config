@@ -4,5 +4,4 @@ typescript.setup({})
 
 local opts = { noremap = true, silent = true, expr = false }
 
-vim.keymap.set("n", "<leader>rn", "<Cmd>TypescriptRenameFile<CR>",
-  opts)
+vim.keymap.set("n", "<leader>rn", "<Cmd>TypescriptRenameFile<CR>", opts)

@@ -40,8 +40,6 @@ lazy.setup({
     'jose-elias-alvarez/typescript.nvim', -- Extra utilities for TypeScript
     'simrat39/rust-tools.nvim', -- Extra utilities for Rust
 
-    -- 'mfussenegger/nvim-dap', -- Debugging
-
     {
         'glepnir/lspsaga.nvim', -- LSP UIs
         event = "BufRead",
@@ -89,7 +87,6 @@ lazy.setup({
     {
         'folke/todo-comments.nvim',
         dependencies = 'nvim-lua/plenary.nvim',
-        config = true,
     },
     {
         'numToStr/Comment.nvim',
