@@ -4,13 +4,16 @@ if (not status) then return end
 tt.setup({
     open_mapping = [[<c-\>]],
     direction = 'float',
+    float_opts = {
+        border = "curved",
+    },
     shade_terminals = true,
 })
 
 local term_status, term = pcall(require, "toggleterm.terminal")
 if (not term_status) then return end
 
-local lazygit = term.Terminal:new({ cmd = "lazygit", hidden = true })
+local lazygit = term.Terminal:new({ cmd = "lazygit", dir = "git_dir", hidden = true })
 
 function _lazygit_toggle()
   lazygit:toggle()

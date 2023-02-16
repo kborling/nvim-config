@@ -9,7 +9,6 @@ if not vim.loop.fs_stat(lazypath) then
       lazypath,
   })
 end
-
 vim.opt.rtp:prepend(lazypath)
 
 local status, lazy = pcall(require, "lazy")
@@ -87,6 +86,11 @@ lazy.setup({
     },
     { "folke/which-key.nvim",        lazy = true },
     'akinsho/nvim-bufferline.lua',
+    {
+        'folke/todo-comments.nvim',
+        dependencies = 'nvim-lua/plenary.nvim',
+        config = true,
+    },
     {
         'numToStr/Comment.nvim',
         config = true,
