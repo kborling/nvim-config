@@ -1,11 +1,7 @@
 local status, trouble = pcall(require, "trouble")
 if (not status) then return end
 
-trouble.setup {
-  -- your configuration comes here
-  -- or leave it empty to use the default settings
-  -- refer to the configuration section below
-}
+trouble.setup({})
 
 local opts = { noremap = true, silent = true }
 
@@ -14,5 +10,5 @@ vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>"
 vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
 vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", opts)
 vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", opts)
-vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", opts)
-vim.keymap.set("n", "gD", "<cmd>TroubleToggle lsp_definitions<cr>", opts)
+-- vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", opts)
+-- vim.keymap.set("n", "gD", "<cmd>TroubleToggle lsp_definitions<cr>", opts)
