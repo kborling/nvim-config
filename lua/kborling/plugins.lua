@@ -102,7 +102,6 @@ lazy.setup({
         'lewis6991/gitsigns.nvim',
         config = true,
     },
-    'dinhhuy258/git.nvim', -- For git blame & browse
 
     'nvim-orgmode/orgmode', -- Org mode
 })
