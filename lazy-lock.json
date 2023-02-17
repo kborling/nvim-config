@@ -32,6 +32,7 @@
   "nvim-web-devicons": { "branch": "master", "commit": "bb6d4fd1e010300510172b173ab5205d37af084f" },
   "orgmode": { "branch": "master", "commit": "313ce5a04e7fc3d677ad906a94fc49c1f54d1572" },
   "plenary.nvim": { "branch": "master", "commit": "9a0d3bf7b832818c042aaf30f692b081ddd58bd9" },
+  "project.nvim": { "branch": "main", "commit": "685bc8e3890d2feb07ccf919522c97f7d33b94e4" },
   "refactoring.nvim": { "branch": "master", "commit": "57c32c6b7a211e5a3a5e4ddc4ad2033daff5cf9a" },
   "rust-tools.nvim": { "branch": "master", "commit": "bd1aa99ffb911a1cf99b3fcf3b44c0391c57e3ef" },
   "telescope-file-browser.nvim": { "branch": "master", "commit": "a18f78121d74c4fae9edd29e138a918a8ede2a70" },

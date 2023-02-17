@@ -67,6 +67,7 @@ lazy.setup({
             { 'nvim-treesitter/nvim-treesitter' }
         }
     },
+    'ahmedkhalf/project.nvim',
     'ThePrimeagen/harpoon',
     'nvim-telescope/telescope.nvim',
     'nvim-telescope/telescope-file-browser.nvim',
