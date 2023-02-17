@@ -3,6 +3,8 @@ vim.opt.clipboard:prepend { 'unnamed', 'unnamedplus' }
 -- Nushell
 vim.opt.shell        = 'nu.exe'
 vim.opt.shellcmdflag = '-c'
+vim.opt.shellxquote  = ''
+vim.opt.shellquote   = ''
 
 -- Powershell
 -- vim.opt.shell        = 'powershell.exe'
