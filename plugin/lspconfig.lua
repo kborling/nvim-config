@@ -67,50 +67,62 @@ protocol.CompletionItemKind = {
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
+-- Add .cmd to lsp commands on windows so they can be found
+local function add_cmd_suffix(cmd)
+  if vim.fn.has('win32') == 1 then
+    return cmd .. '.cmd'
+  end
+  return cmd
+end
+
 nvim_lsp.tsserver.setup {
     on_attach = on_attach,
     filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-    cmd = { "typescript-language-server", "--stdio" },
+    cmd = { add_cmd_suffix("typescript-language-server"), "--stdio" },
     capabilities = capabilities
 }
 
+-- NOTE: Change to angular project path
+local project_library_path = "~/Projects/angular-tests"
+local angular_cmd = { add_cmd_suffix("ngserver"), "--stdio", "--tsProbeLocations",
+    project_library_path, "--ngProbeLocations", project_library_path }
+-- local angular_cmd = { add_cmd_suffix("ngserver"), "--stdio", "--tsProbeLocations", "", "--ngProbeLocations", "" }
 nvim_lsp.angularls.setup {
     on_attach = on_attach,
+    cmd = angular_cmd,
+    on_new_config = function(new_config, new_root_dir)
+      new_config.cmd = angular_cmd
+    end,
     capabilities = capabilities
 }
 
 nvim_lsp.tailwindcss.setup {
     on_attach = on_attach,
+    cmd = { add_cmd_suffix("tailwindcss-language-server"), "--stdio" },
     capabilities = capabilities
 }
 
 nvim_lsp.html.setup {
     on_attach = on_attach,
+    cmd = { add_cmd_suffix("vscode-html-language-server"), "--stdio" },
     capabilities = capabilities
 }
 
 nvim_lsp.emmet_ls.setup {
     on_attach = on_attach,
+    cmd = { add_cmd_suffix("emmet-ls"), "--stdio" },
     capabilities = capabilities
 }
 
-nvim_lsp.svelte.setup {
+nvim_lsp.csharp_ls.setup {
     on_attach = on_attach,
-    capabilities = capabilities
-}
-
-nvim_lsp.omnisharp.setup {
-    on_attach = on_attach,
+    cmd = { add_cmd_suffix("csharp-ls") },
     capabilities = capabilities
 }
 
 nvim_lsp.jsonls.setup {
     on_attach = on_attach,
-    capabilities = capabilities
-}
-
-nvim_lsp.gopls.setup {
-    on_attach = on_attach,
+    cmd = { add_cmd_suffix("vscode-json-language-server"), "--stdio" },
     capabilities = capabilities
 }
 
@@ -133,6 +145,7 @@ nvim_lsp.rls.setup {
 }
 
 nvim_lsp.lua_ls.setup {
+    cmd = { add_cmd_suffix("lua-language-server") },
     capabilities = capabilities,
     on_attach = function(client, bufnr)
       on_attach(client, bufnr)
