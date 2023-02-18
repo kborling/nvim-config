@@ -19,6 +19,14 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 -- Replace all
 keymap.set('n', 'S', ':%s///cg<Left><Left><Left><Left>')
 
+-- Move lines
+keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+
+-- Indent
+keymap.set('v', '<', '<gv')
+keymap.set('v', '>', '>gv')
+
 -- Reduce empty lines into one
 keymap.set('n', '<leader>m', ':g/^$/,/./-1j<CR>:noh<CR>')
 
