@@ -48,10 +48,6 @@ lazy.setup({
             { 'nvim-treesitter/nvim-treesitter' }
         }
     },
-    {
-        'folke/trouble.nvim', -- LSP diagnostics
-        dependencies = 'nvim-tree/nvim-web-devicons',
-    },
     'L3MON4D3/LuaSnip',
     {
         'nvim-treesitter/nvim-treesitter',
