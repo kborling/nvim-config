@@ -1,5 +1,9 @@
 vim.opt.clipboard:prepend { 'unnamed', 'unnamedplus' }
 
+vim.opt.shiftwidth   = 4
+vim.opt.softtabstop  = 4
+vim.opt.tabstop      = 4
+
 -- Nushell
 vim.opt.shell        = 'nu.exe'
 vim.opt.shellcmdflag = '-c'
