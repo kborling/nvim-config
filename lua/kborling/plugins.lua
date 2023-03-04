@@ -67,10 +67,6 @@ lazy.setup({
     'ThePrimeagen/harpoon',
     'nvim-telescope/telescope.nvim',
     'nvim-telescope/telescope-file-browser.nvim',
-    {
-        'windwp/nvim-ts-autotag',
-        config = true,
-    },
     'kylechui/nvim-surround',
     'norcalli/nvim-colorizer.lua',
     'folke/zen-mode.nvim',
