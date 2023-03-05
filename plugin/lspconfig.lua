@@ -125,10 +125,11 @@ nvim_lsp.jsonls.setup {
     cmd = { add_cmd_suffix("vscode-json-language-server"), "--stdio" },
     capabilities = capabilities
 }
-
+local clang_capabilities = vim.lsp.protocol.make_client_capabilities()
+clang_capabilities.offsetEncoding = { "utf-16" }
 nvim_lsp.clangd.setup {
     on_attach = on_attach,
-    capabilities = capabilities
+    capabilities = clang_capabilities
 }
 
 nvim_lsp.rls.setup {

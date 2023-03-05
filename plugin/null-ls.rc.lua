@@ -39,6 +39,8 @@ null_ls.setup {
         null_ls.builtins.code_actions.eslint_d.with({
             command = add_cmd_suffix('eslint_d')
         }),
+        -- null_ls.builtins.diagnostics.clang_check,
+        null_ls.builtins.diagnostics.cppcheck,
         -- Typescript extras
         require("typescript.extensions.null-ls.code-actions"),
     },
