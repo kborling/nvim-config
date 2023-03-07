@@ -1,13 +1,13 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-      "git",
-      "clone",
-      "--filter=blob:none",
-      "https://github.com/folke/lazy.nvim.git",
-      "--branch=stable", -- latest stable release
-      lazypath,
-  })
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -18,8 +18,8 @@ lazy.setup({
     { 'projekt0n/github-nvim-theme', version = 'v0.0.7' },
     'arturgoms/moonbow.nvim',
     {
-        "jesseleite/nvim-noirbuddy",
-        dependencies = { "tjdevries/colorbuddy.nvim", branch = "dev" }
+        'Tsuzat/NeoSolarized.nvim',
+        dependencies = 'tjdevries/colorbuddy.nvim'
     },
     'nvim-lualine/lualine.nvim', -- Statusline
     'nvim-lua/plenary.nvim', -- Common utilities
@@ -51,7 +51,7 @@ lazy.setup({
     'L3MON4D3/LuaSnip',
     {
         'nvim-treesitter/nvim-treesitter',
-        build = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+        --build = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
     },
     'nvim-treesitter/nvim-treesitter-textobjects',
     'nvim-tree/nvim-web-devicons', -- File icons
@@ -74,7 +74,7 @@ lazy.setup({
         "iamcco/markdown-preview.nvim",
         build = function() vim.fn["mkdp#util#install"]() end,
     },
-    { "folke/which-key.nvim",        lazy = true },
+    -- { "folke/which-key.nvim",        lazy = true },
     'akinsho/nvim-bufferline.lua',
     {
         'folke/todo-comments.nvim',
