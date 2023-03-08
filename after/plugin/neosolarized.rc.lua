@@ -18,7 +18,6 @@ n.setup({
     },
     -- Add specific hightlight groups
     -- on_highlights = function(highlights, colors)
-    -- highlights.CusorLine.bg = colors.none -- Using `bg` background for CursorLine
-    -- highlights.CusorLineNr.bg = colors.none -- Using `bg` foreground for CursorLine
+    -- highlights.Include.fg = colors.red
     -- end,
 })
