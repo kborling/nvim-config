@@ -21,3 +21,13 @@ n.setup({
     -- highlights.Include.fg = colors.red
     -- end,
 })
+
+-- Set colorscheme to NeoSolarized
+vim.cmd [[
+   try
+        colorscheme NeoSolarized
+    catch /^Vim\%((\a\+)\)\=:E18o
+        colorscheme default
+        set background=dark
+    endtry
+]]

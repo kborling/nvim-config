@@ -49,7 +49,7 @@ if vim.g.neovide then
     vim.opt.guifont = "Berkeley Mono:h12"
     vim.g.neovide_transparency = 1.0
     vim.g.neovide_scroll_animation_length = 0.2
-    vim.g.neovide_hide_mouse_when_typing = false
+    vim.g.neovide_hide_mouse_when_typing = true
     vim.g.neovide_refresh_rate = 144
     vim.g.neovide_cursor_vfx_mode = "railgun"
 end
