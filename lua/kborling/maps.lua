@@ -1,5 +1,8 @@
 local keymap = vim.keymap
 
+-- Save
+keymap.set('n', ':W', ':w')
+
 -- Replace
 keymap.set('n', 'x', '"_x')
 
