@@ -58,7 +58,6 @@ lazy.setup({
     'johmsalas/text-case.nvim', -- Text case conversion
     {
         'Wansmer/treesj',
-        keys = { '<space>m', '<space>j', '<space>s' },
         dependencies = { 'nvim-treesitter/nvim-treesitter' },
     },
     {
@@ -93,8 +92,17 @@ lazy.setup({
         "danymat/neogen",
         dependencies = "nvim-treesitter/nvim-treesitter"
     },
-    'github/copilot.vim',
-
+    -- 'github/copilot.vim',
+    {
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
+    },
+    -- {
+    --     "zbirenbaum/copilot-cmp",
+    --     after = { "copilot.lua" },
+    --     config = true,
+    -- },
     'timuntersberger/neogit', -- Magit clone
     {
         'lewis6991/gitsigns.nvim',

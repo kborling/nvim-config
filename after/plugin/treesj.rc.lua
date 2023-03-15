@@ -2,14 +2,11 @@ local status, tsj = pcall(require, "treesj")
 if (not status) then return end
 
 tsj.setup({
-    -- Use default keymaps
-    -- (<space>m - toggle, <space>j - join, <space>s - split)
-    use_default_keymaps = true,
     -- Node with syntax error will not be formatted
     check_syntax_error = true,
     -- If line after join will be longer than max value,
     -- node will not be formatted
-    max_join_length = 120,
+    max_join_length = 240,
     -- hold|start|end:
     -- hold - cursor follows the node/place on which it was called
     -- start - cursor jumps to the first symbol of the node being formatted
@@ -21,10 +18,8 @@ tsj.setup({
     dot_repeat = true,
 })
 
-local opts = { noremap = true, silent = true, expr = false }
-
 -- For use default preset and it work with dot
-vim.keymap.set('n', '<leader>m', require('treesj').toggle, opts)
+vim.keymap.set('n', '<leader>m', require('treesj').toggle)
 -- For extending default preset with `recursive = true`, but this doesn't work with dot
 vim.keymap.set('n', '<leader>M', function()
     require('treesj').toggle({ split = { recursive = true } })
