@@ -57,6 +57,11 @@ lazy.setup({
     'nvim-tree/nvim-web-devicons', -- File icons
     'johmsalas/text-case.nvim', -- Text case conversion
     {
+        'Wansmer/treesj',
+        keys = { '<space>m', '<space>j', '<space>s' },
+        dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    },
+    {
         'ThePrimeagen/refactoring.nvim',
         dependencies = {
             { 'nvim-lua/plenary.nvim' },

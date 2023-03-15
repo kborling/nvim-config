@@ -31,7 +31,7 @@ keymap.set('v', '<', '<gv')
 keymap.set('v', '>', '>gv')
 
 -- Reduce empty lines into one
-keymap.set('n', '<leader>m', ':g/^$/,/./-1j<CR>:noh<CR>')
+keymap.set('n', '<leader>r', ':g/^$/,/./-1j<CR>:noh<CR>')
 
 -- Kill buffer without removing window split
 -- Shows previous buffer as the new buffer
