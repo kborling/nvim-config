@@ -31,3 +31,6 @@ copilot.setup({
     copilot_node_command = 'node', -- Node.js version must be > 16.x
     server_opts_overrides = {},
 })
+
+local opts = { noremap = true, silent = true }
+vim.keymap.set('n', '<leader>cp', '<Cmd>Copilot toggle<CR>', opts)
