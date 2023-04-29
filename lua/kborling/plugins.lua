@@ -22,9 +22,6 @@ lazy.setup({
         'Tsuzat/NeoSolarized.nvim',
         lazy = false,
         priority = 1000,
-        config = function()
-            vim.cmd [[ colorscheme NeoSolarized ]]
-        end
     },
     'nvim-lualine/lualine.nvim',  -- Statusline
     'nvim-lua/plenary.nvim',      -- Common utilities

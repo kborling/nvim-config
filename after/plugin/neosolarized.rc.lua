@@ -21,3 +21,5 @@ n.setup({
     -- highlights.Include.fg = colors.red
     -- end,
 })
+
+vim.cmd [[ colorscheme NeoSolarized ]]
