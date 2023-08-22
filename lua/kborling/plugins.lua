@@ -19,7 +19,8 @@ lazy.setup({
     'EdenEast/nightfox.nvim',
     {
         'Tsuzat/NeoSolarized.nvim',
-        dependencies = 'tjdevries/colorbuddy.nvim'
+        lazy = false,
+        priority = 1000,
     },
     {
         'rose-pine/neovim',
