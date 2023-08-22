@@ -5,7 +5,7 @@ local lspkind = require 'lspkind'
 cmp.setup({
     snippet = {
         expand = function(args)
-          require('luasnip').lsp_expand(args.body)
+            require('luasnip').lsp_expand(args.body)
         end,
     },
     mapping = cmp.mapping.preset.insert({
@@ -19,6 +19,7 @@ cmp.setup({
         }),
     }),
     sources = cmp.config.sources({
+        -- { name = 'copilot' },
         { name = 'luasnip' },
         { name = 'nvim_lsp' },
         { name = 'buffer' },
