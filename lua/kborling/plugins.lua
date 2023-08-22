@@ -16,29 +16,41 @@ if (not status) then return end
 
 lazy.setup({
     { 'projekt0n/github-nvim-theme', version = 'v0.0.7' },
-    'arturgoms/moonbow.nvim',
+    'EdenEast/nightfox.nvim',
     {
         'Tsuzat/NeoSolarized.nvim',
         dependencies = 'tjdevries/colorbuddy.nvim'
     },
-    'nvim-lualine/lualine.nvim', -- Statusline
-    'nvim-lua/plenary.nvim', -- Common utilities
+    {
+        'rose-pine/neovim',
+        name = 'rose-pine',
+    },
+    {
+        'arturgoms/moonbow.nvim',
+        lazy = false,
+    priority = 1000,
+    config = function()
+        vim.cmd [[ colorscheme moonbow ]]
+    end
+    },
+    'nvim-lualine/lualine.nvim',  -- Statusline
+    'nvim-lua/plenary.nvim',      -- Common utilities
     {
         'sindrets/diffview.nvim', -- File diffs
         dependencies = 'nvim-lua/plenary.nvim'
     },
-    'onsails/lspkind-nvim', -- vscode-like pictograms
-    'hrsh7th/cmp-buffer', -- nvim-cmp source for buffer words
-    'hrsh7th/cmp-nvim-lsp', -- nvim-cmp source for neovim's built-in LSP
-    'hrsh7th/nvim-cmp', -- Completion
-    'neovim/nvim-lspconfig', -- LSP
+    'onsails/lspkind-nvim',            -- vscode-like pictograms
+    'hrsh7th/cmp-buffer',              -- nvim-cmp source for buffer words
+    'hrsh7th/cmp-nvim-lsp',            -- nvim-cmp source for neovim's built-in LSP
+    'hrsh7th/nvim-cmp',                -- Completion
+    'neovim/nvim-lspconfig',           -- LSP
     'jose-elias-alvarez/null-ls.nvim', -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
     'akinsho/toggleterm.nvim',
 
     'jose-elias-alvarez/typescript.nvim', -- Extra utilities for TypeScript
-    'simrat39/rust-tools.nvim', -- Extra utilities for Rust
+    'simrat39/rust-tools.nvim',           -- Extra utilities for Rust
 
     {
         'glepnir/lspsaga.nvim', -- LSP UIs
@@ -55,7 +67,7 @@ lazy.setup({
     },
     'nvim-treesitter/nvim-treesitter-textobjects',
     'nvim-tree/nvim-web-devicons', -- File icons
-    'johmsalas/text-case.nvim', -- Text case conversion
+    'johmsalas/text-case.nvim',    -- Text case conversion
     {
         'ThePrimeagen/refactoring.nvim',
         dependencies = {
@@ -88,8 +100,17 @@ lazy.setup({
         "danymat/neogen",
         dependencies = "nvim-treesitter/nvim-treesitter"
     },
-    'github/copilot.vim',
-
+    -- 'github/copilot.vim',
+    {
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
+    },
+    -- {
+    --     "zbirenbaum/copilot-cmp",
+    --     after = { "copilot.lua" },
+    --     config = true,
+    -- },
     'timuntersberger/neogit', -- Magit clone
     {
         'lewis6991/gitsigns.nvim',

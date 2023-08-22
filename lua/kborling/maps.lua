@@ -7,7 +7,7 @@ keymap.set('n', ':W', ':w')
 keymap.set('n', 'x', '"_x')
 
 -- Execute Lua script in {file}.
-keymap.set('n', '<leader>l', ':luafile %<CR>')
+keymap.set('n', ';l', ':luafile %<CR>')
 
 -- Increment/decrement
 keymap.set('n', '+', '<C-a>')
@@ -15,6 +15,11 @@ keymap.set('n', '-', '<C-x>')
 
 -- Delete a word backwards
 keymap.set('n', 'dw', 'vb"_d')
+
+-- Disable help. Use Esc instead.
+keymap.set('n', '<F1>', '<Esc>')
+keymap.set('i', '<F1>', '<Esc>')
+keymap.set('v', '<F1>', '<Esc>')
 
 -- Select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
@@ -31,7 +36,7 @@ keymap.set('v', '<', '<gv')
 keymap.set('v', '>', '>gv')
 
 -- Reduce empty lines into one
-keymap.set('n', '<leader>m', ':g/^$/,/./-1j<CR>:noh<CR>')
+keymap.set('n', ';r', ':g/^$/,/./-1j<CR>:noh<CR>')
 
 -- Kill buffer without removing window split
 -- Shows previous buffer as the new buffer

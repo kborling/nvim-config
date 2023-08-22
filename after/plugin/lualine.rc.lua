@@ -25,7 +25,8 @@ lualine.setup {
     options = {
         icons_enabled = true,
         -- theme = theme, --'iceberg_dark',
-        theme = 'NeoSolarized',
+        -- theme = 'NeoSolarized',
+        theme = 'moonbox',
         section_separators = { left = '', right = '' },
         component_separators = { left = '', right = '' },
         disabled_filetypes = {}
