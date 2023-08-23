@@ -83,7 +83,7 @@ nvim_lsp.tsserver.setup {
 }
 
 -- NOTE: Change to angular project path
-local project_library_path = "~/Projects/angular-tests"
+local project_library_path = "~/source/repos/pps/Applications/Portal/UI/Practice"
 local angular_cmd = { add_cmd_suffix("ngserver"), "--stdio", "--tsProbeLocations",
     project_library_path, "--ngProbeLocations", project_library_path }
 -- local angular_cmd = { add_cmd_suffix("ngserver"), "--stdio", "--tsProbeLocations", "", "--ngProbeLocations", "" }

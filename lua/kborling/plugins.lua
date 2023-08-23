@@ -16,12 +16,23 @@ if (not status) then return end
 
 lazy.setup({
     { 'projekt0n/github-nvim-theme', version = 'v0.0.7' },
-    'arturgoms/moonbow.nvim',
     'EdenEast/nightfox.nvim',
     {
         'Tsuzat/NeoSolarized.nvim',
         lazy = false,
         priority = 1000,
+    },
+    {
+        'rose-pine/neovim',
+        name = 'rose-pine',
+    },
+    {
+        'arturgoms/moonbow.nvim',
+        lazy = false,
+    priority = 1000,
+    config = function()
+        vim.cmd [[ colorscheme moonbow ]]
+    end
     },
     'nvim-lualine/lualine.nvim',  -- Statusline
     'nvim-lua/plenary.nvim',      -- Common utilities
