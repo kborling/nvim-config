@@ -95,6 +95,7 @@ ts.setup {
         "javascript",
         "jsdoc",
         "markdown",
+        "markdown_inline",
         "c_sharp",
         "json",
         "yaml",
