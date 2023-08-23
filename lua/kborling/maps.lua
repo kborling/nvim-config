@@ -7,7 +7,7 @@ keymap.set('n', ':W', ':w')
 keymap.set('n', 'x', '"_x')
 
 -- Execute Lua script in {file}.
-keymap.set('n', '<leader>l', ':luafile %<CR>')
+keymap.set('n', ';l', ':luafile %<CR>')
 
 -- Increment/decrement
 keymap.set('n', '+', '<C-a>')
