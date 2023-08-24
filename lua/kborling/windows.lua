@@ -4,6 +4,9 @@ vim.opt.shiftwidth   = 4
 vim.opt.softtabstop  = 4
 vim.opt.tabstop      = 4
 
+-- Spacing between lines
+vim.opt.linespace    = 1
+
 -- Nushell
 vim.opt.shell        = 'nu.exe'
 vim.opt.shellcmdflag = '-c'
