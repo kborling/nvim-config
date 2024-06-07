@@ -29,10 +29,10 @@ lazy.setup({
     {
         'arturgoms/moonbow.nvim',
         lazy = false,
-    priority = 1000,
-    config = function()
-        vim.cmd [[ colorscheme moonbow ]]
-    end
+        priority = 1000,
+        config = function()
+            vim.cmd [[ colorscheme moonbow ]]
+        end
     },
     'nvim-lualine/lualine.nvim',  -- Statusline
     'nvim-lua/plenary.nvim',      -- Common utilities
@@ -87,7 +87,7 @@ lazy.setup({
         "iamcco/markdown-preview.nvim",
         build = function() vim.fn["mkdp#util#install"]() end,
     },
-    -- { "folke/which-key.nvim",        lazy = true },
+    { "folke/which-key.nvim",        lazy = true },
     'akinsho/nvim-bufferline.lua',
     {
         'folke/todo-comments.nvim',
@@ -101,18 +101,19 @@ lazy.setup({
         "danymat/neogen",
         dependencies = "nvim-treesitter/nvim-treesitter"
     },
-    -- 'github/copilot.vim',
     {
         "zbirenbaum/copilot.lua",
         cmd = "Copilot",
         event = "InsertEnter",
     },
-    -- {
-    --     "zbirenbaum/copilot-cmp",
-    --     after = { "copilot.lua" },
-    --     config = true,
-    -- },
-    'timuntersberger/neogit', -- Magit clone
+    {
+        'NeogitOrg/neogit',                  -- Magit clone
+        dependencies = {
+            "nvim-lua/plenary.nvim",         -- required
+            "sindrets/diffview.nvim",        -- optional - Diff integration
+            "nvim-telescope/telescope.nvim", -- optional
+        },
+    },
     {
         'lewis6991/gitsigns.nvim',
         config = true,
