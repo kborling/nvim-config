@@ -50,8 +50,7 @@ lazy.setup({
     'williamboman/mason-lspconfig.nvim',
     'akinsho/toggleterm.nvim',
 
-    'jose-elias-alvarez/typescript.nvim', -- Extra utilities for TypeScript
-    'simrat39/rust-tools.nvim',           -- Extra utilities for Rust
+    'simrat39/rust-tools.nvim', -- Extra utilities for Rust
 
     {
         'glepnir/lspsaga.nvim', -- LSP UIs
