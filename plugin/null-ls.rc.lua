@@ -41,8 +41,6 @@ null_ls.setup {
         }),
         -- null_ls.builtins.diagnostics.clang_check,
         null_ls.builtins.diagnostics.cppcheck,
-        -- Typescript extras
-        require("typescript.extensions.null-ls.code-actions"),
     },
     on_attach = function(client, bufnr)
       if client.supports_method("textDocument/formatting") then
