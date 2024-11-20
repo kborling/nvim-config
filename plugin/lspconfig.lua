@@ -146,7 +146,7 @@ nvim_lsp.rls.setup {
 }
 
 nvim_lsp.lua_ls.setup {
-    cmd = { add_cmd_suffix("lua-language-server") },
+    cmd = { "lua-language-server" },
     capabilities = capabilities,
     on_attach = function(client, bufnr)
         on_attach(client, bufnr)
