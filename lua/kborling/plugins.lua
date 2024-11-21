@@ -15,16 +15,18 @@ local status, lazy = pcall(require, "lazy")
 if (not status) then return end
 
 lazy.setup({
-    { 'projekt0n/github-nvim-theme', version = 'v0.0.7' },
-    'EdenEast/nightfox.nvim',
     {
         'Tsuzat/NeoSolarized.nvim',
         lazy = false,
         priority = 1000,
     },
     {
-        'rose-pine/neovim',
-        name = 'rose-pine',
+        "wtfox/jellybeans.nvim",
+        priority = 1000,
+        config = function()
+            require("jellybeans").setup()
+            vim.cmd.colorscheme("jellybeans")
+        end,
     },
     {
         'arturgoms/moonbow.nvim',
@@ -76,7 +78,11 @@ lazy.setup({
         }
     },
     'ahmedkhalf/project.nvim',
-    'ThePrimeagen/harpoon',
+    {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { { "nvim-lua/plenary.nvim" } }
+    },
     'nvim-telescope/telescope.nvim',
     'nvim-telescope/telescope-file-browser.nvim',
     'kylechui/nvim-surround',
@@ -86,7 +92,7 @@ lazy.setup({
         "iamcco/markdown-preview.nvim",
         build = function() vim.fn["mkdp#util#install"]() end,
     },
-    { "folke/which-key.nvim",        lazy = true },
+    { "folke/which-key.nvim", lazy = true },
     'akinsho/nvim-bufferline.lua',
     {
         'folke/todo-comments.nvim',
